@@ -1,0 +1,28 @@
+@use "initial";
+@use "header";
+@use "gallery";
+@use "details";
+@use "modal-navbar";
+@use "gallery-modal";
+@use "modal-cart";
+@use "navbar";
+@use "input";
+
+.main__container {
+    width: 375px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: 1115px){
+        width: 1115px;
+    }
+}
+
+.content {
+    @media (min-width: 1115px) {
+        padding: 100px 60px;
+        display: flex;
+        align-items: center;
+        gap: 100px;
+    }
+}

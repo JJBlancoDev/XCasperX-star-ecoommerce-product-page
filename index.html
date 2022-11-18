@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="main__container">
+    <header class="header">
+
+      <div class="header__container-menu">
+        <img class="header__menu" src="./images/icon-menu.svg" alt="Menu">
+        <img class="header__logo" src="./images/logo.svg" alt="Logo">
+
+        <!-- nav-bar desktop -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li><a class="navbar__item" href="#">Collections</a></li>
+            <li><a class="navbar__item" href="#">Men</a></li>
+            <li><a class="navbar__item" href="#">Women</a></li>
+            <li><a class="navbar__item" href="#">About</a></li>
+            <li><a class="navbar__item" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- modal nav-bar -->
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-navbar__close" src="./images/icon-close.svg" alt="Close">
+          <ul class="modal-navbar__list">
+            <li><a class="modal-navbar__item" href="#">Collections</a></li>
+            <li><a class="modal-navbar__item" href="#">Men</a></li>
+            <li><a class="modal-navbar__item" href="#">Women</a></li>
+            <li><a class="modal-navbar__item" href="#">About</a></li>
+            <li><a class="modal-navbar__item" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__cart-user">
+        <div class="header__cart">
+          <p class="header__cart--notification">3</p>
+          <img class="header__cart-cart" src="./images/icon-cart.svg" alt="Cart">
+        </div>
+        <img class="header__user" src="./images/image-avatar.png" alt="user">
+      </div>
+    </header>
+
+    <section class="content">
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img class="gallery__previous" src="./images/icon-previous.svg" alt="Previous">
+          <img class="gallery__next" src="./images/icon-next.svg" alt="Next">
+        </div>
+
+        <!-- Thumbnail mode desktop -->
+        <div class="gallery__thumbnails">
+          <img class="gallery__thumbnail" id="1" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail">
+          <img class="gallery__thumbnail" id="2" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail">
+          <img class="gallery__thumbnail" id="3" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail">
+          <img class="gallery__thumbnail" id="4" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail">
+        </div>
+
+      </article>
+
+
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+        <p class="details__description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+
+        <div class="details__price">
+          <p class="details__now">$125.00 <span class="details__now--discount">50%</span></p>
+          <p class="details__before">$250.00</p>
+        </div>
+
+        <div class="details__product-quantity">
+          <div class="input">
+            <img class="input__minus" src="./images/icon-minus.svg" alt="minus">
+            <input class="input__value" type="text" value="0" disabled>
+            <img class="input__plus" src="./images/icon-plus.svg" alt="plus">
+          </div>
+          <button class="details__button"><img src="./images/icon-cart-button.svg" alt="cart">Add to cart</button>
+        </div>
+
+      </article>
+    </section>
+
+
+    <!-- modal cart -->
+    <div class="cart-modal">
+      <h2 class="cart-modal__title" >Cart</h2>
+      <div class="cart-modal__checkout-container">
+        <div class="cart-modal__details-container">
+          <img class="cart-modal__image-product" src="./images/image-product-1-thumbnail.jpg" alt="Product">
+          <div class="cart-modal__description">
+            <h2 class="cart-modal__title-product">Autumn Limited Edition...</h2>
+            <p class="cart-modal__price">$125.00 x 3 <span class="cart-modal__price-new">$375.00</span></p>
+          </div>
+          <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete">
+        </div>
+        <button class="cart-modal__button">Checkout</button>
+      </div>
+    </div>
+
+
+    <!-- Modal gallery -->
+    <div class="modal-gallery__background">
+      <article class="modal-gallery">
+        <div class="modal-gallery__container-close">
+          <img class="modal-navbar__close" src="./images/icon-close.svg" alt="Close">
+        </div>
+        <div class="modal-gallery__image-container">
+          <img class="modal-gallery__previous" src="./images/icon-previous.svg" alt="Previous">
+          <img class="modal-gallery__next" src="./images/icon-next.svg" alt="Next">
+        </div>
+  
+        <!-- Thumbnail mode desktop -->
+        <div class="modal-gallery__thumbnails">
+          <img class="modal-gallery__thumbnail" id="m1" src="./images/image-product-1-thumbnail.jpg" alt="Thumbnail">
+          <img class="modal-gallery__thumbnail" id="m2" src="./images/image-product-2-thumbnail.jpg" alt="Thumbnail">
+          <img class="modal-gallery__thumbnail" id="m3" src="./images/image-product-3-thumbnail.jpg" alt="Thumbnail">
+          <img class="modal-gallery__thumbnail" id="m4" src="./images/image-product-4-thumbnail.jpg" alt="Thumbnail">
+        </div>
+      </article>
+    </div >
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

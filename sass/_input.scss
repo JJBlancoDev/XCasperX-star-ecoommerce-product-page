@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins";
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: v.$Light-grayish-blue;
+
+    &__minus {
+        @include mixins.btn-quantity(50px,50px, 23px, 18px);
+
+        @media (min-width: 1115px){
+            @include mixins.btn-quantity(20px,100%, 18px, 5px);
+        }
+    }
+
+    &__plus {
+        @include mixins.btn-quantity(50px, 50px, 19px, 19px);
+
+        @media (min-width: 1115px){
+            @include mixins.btn-quantity(20px,100%, 15px, 5px);
+        }
+    }
+
+    &__value {
+        width: 100%;
+        text-align: center;
+        border: none;
+        color: v.$Very-dark-blue;
+        font-weight: 700;
+        font-size: 1.063em;
+        outline: none;
+    }
+
+    @media (min-width: 1115px) {
+        width: 140px;
+        height: 40px;
+    }
+}

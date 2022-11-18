@@ -1,0 +1,63 @@
+@use "variables" as v;
+@use "mixins";
+
+
+.modal-gallery {
+    width: 445px;
+    
+    &__background {
+        @include mixins.background-modal;
+        display: none;
+        // display: grid;
+        place-content: center;
+    }
+
+    &__image-container {
+        background-image: url("../images/image-product-1.jpg");
+        height: 445px;
+        background-size: cover;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    &__thumbnails {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__thumbnail {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+
+        &:hover {
+            border: solid 2px v.$Orange;
+            opacity: 0.4;
+            cursor: pointer;
+        }
+    }
+
+    &__previous {
+        @include mixins.btn-gallery(200px, -18px, true);
+    }
+
+    &__next {
+        @include mixins.btn-gallery(200px, 425px, true);
+    }
+
+    &__container-close {
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    &__close {
+        width: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
